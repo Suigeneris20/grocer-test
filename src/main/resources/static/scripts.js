@@ -87,14 +87,15 @@ function saveItem() {
 }
 
 function deleteItem(id) {
-	const choice = confirm(`Do you want to delete the music item with id ${id}?`);
+	const choice = confirm(`Do you want to delete the grocery item with id ${id}?`);
 	const url = `/items/${id}`;
     //const url = `http://jcdemoopenshift1.conygre.com:8081/items/${id}`;
 	if (choice == true) {
 		fetch(url, {
 			method: 'DELETE'
 		}).then((response) => {
-			alert(`The music item with id ${id} has been deleted`);
+			alert(`The grocery item with id ${id} has been deleted`);
+			console.log(typeof id);
 			getItems();
 		});
 	}
