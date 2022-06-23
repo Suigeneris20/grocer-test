@@ -96,6 +96,8 @@ function deleteItem(id) {
 		}).then((response) => {
 			alert(`The grocery item with id ${id} has been deleted`);
 			console.log(typeof(id));
+			console.log(id);
+			id = id - 1;
 			getItems();
 		});
 	}
