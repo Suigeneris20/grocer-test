@@ -108,7 +108,7 @@ function calculateTotal() {
 	var runningTotal = 0;
 	var Tref = document.getElementsByTagName('table').items.getElementsByTagName('tbody').tbodyitems;
 	for (var i = 0; i < Tref.rows.length; ++i){
-		runningTotal += (+Tref.rows[i].cells[3].innerText);
+		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
 	alert(`Current running total is ${runningTotal}`);
 }
