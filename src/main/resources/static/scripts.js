@@ -105,11 +105,10 @@ function deleteItem(id) {
 }
 
 function calculateTotal() {
-	const table = document.querySelector("table");  
-	for (const row of table.rows) {  
-  		for (const cell of row.cells) {  
-   			console.log(cell)
-			console.log(cell.innerText)
-  	}  
-		}
+	var runningTotal = 0;
+	var Tref = document.getElementsByTagName('table').items.getElementsByTagName('tbody').tbodyitems;
+	for (var i = 0; i < Tref.rows.length; ++i){
+		runningTotal += (+Tref.rows[1].cells[3].innerText);
+	}
+	alert(`Current running total is ${runningTotal}`);
 }
