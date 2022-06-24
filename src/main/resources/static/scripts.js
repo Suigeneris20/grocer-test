@@ -98,7 +98,18 @@ function deleteItem(id) {
 			console.log(typeof(id));
 			console.log(id);
 			id = id - 1;
+			console.log(id);
 			getItems();
 		});
 	}
+}
+
+function calculateTotal() {
+	const table = document.querySelector("table");  
+	for (const row of table.rows) {  
+  		for (const cell of row.cells) {  
+   			console.log(cell)
+			console.log(cell.innerText)
+  	}  
+		}
 }
