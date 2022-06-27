@@ -17,10 +17,3 @@ th {
     color: white;
 }
 
-form {
-  overflow: hidden;
-}
-input {
-  float: right;
-  clear: both;
-}
