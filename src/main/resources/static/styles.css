@@ -17,7 +17,8 @@ th {
     color: white;
 }
 
-.budget{
-margin-left: 50%
+#budgetbox{
+position: relative;
+left: 20%;
 }
 
