@@ -112,6 +112,7 @@ function calculateTotal() {
 }
 
 function changeColour(currentTotal) {
+	if (document.getElementById('budgetbox').value === '') alert('Please Enter your budgeted value');
 	var inputVal = (+document.getElementById('budgetbox').value);
 	if(inputVal < currentTotal) document.getElementById('budgetbox').style.backgroundColor = "red";
 	else document.getElementById('budgetbox').style.backgroundColor = "green";
