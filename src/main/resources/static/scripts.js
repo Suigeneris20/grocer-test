@@ -106,6 +106,14 @@ function calculateTotal() {
 	for (var i = 0; i < Tref.rows.length; ++i){
 		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
-	document.write("The total price is ", runningTotal );
+	changeColour(runningTotal);
+	//document.write("The total price is ", runningTotal );
 	//alert(`Current running total is ${runningTotal}`);
+}
+
+function changeColour(currentTotal) {
+	var inputVal = (+document.getElementById('budgetbox').value);
+	if(inputVal < currentTotal) inputVal.style.backgroundColor = "red";
+	else inputVal.style.backgroundColor = "green";
+	
 }
