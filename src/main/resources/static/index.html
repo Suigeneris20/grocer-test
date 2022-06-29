@@ -14,12 +14,11 @@
  
 
 <table style="width:50%">
-    <tr><td>Budget </td>
-  
+    <tr><td>Budget</td>
     <td> <input  type="text" size="10" id ="budgetbox"></td>
     </tr>
     
-    <tr><td>Enter Item</td><td><span id="id"></span></td></tr>
+    <tr><td>Enter Item: </td><td><span id="id"></span></td></tr>
     <tr><td>Item</td><td><input id="name" type="text" size="40"></td></tr>
     <tr><td>Quantity</td><td><input id="artist_group" type="text" size="40"></td></tr>
     <tr><td>Unit Price</td><td><input id="genre" type="text" size="20"></td></tr>
@@ -28,7 +27,7 @@
             <button id="save" onclick="saveItem()" disabled="disabled">Save Item</button>
             &nbsp;<button id="add" onclick="addItem()">Add Item</button>
             &nbsp;<button id="calculate" onclick="calculateTotal()">Calculate Total</button>
-           &nbsp;<h3> Total Amount: $<span id="totalSum"> </span> </h3>
+           &nbsp;<h3> Total Amount: <span id="totalSum"> </span> </h3>
         </td>
           
     </tr>
