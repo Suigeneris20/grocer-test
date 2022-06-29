@@ -106,6 +106,7 @@ function calculateTotal() {
 	for (var i = 0; i < Tref.rows.length; ++i){
 		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
+	console.log(runningTotal);
 	changeColour(runningTotal);
 	//document.write("The total price is ", runningTotal );
 	//alert(`Current running total is ${runningTotal}`);
