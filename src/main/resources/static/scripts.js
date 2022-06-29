@@ -95,10 +95,6 @@ function deleteItem(id) {
 			method: 'DELETE'
 		}).then((response) => {
 			alert(`The grocery item with id ${id} has been deleted`);
-			console.log(typeof(id));
-			console.log(id);
-			id = id - 1;
-			console.log(id);
 			getItems();
 		});
 	}
