@@ -120,11 +120,11 @@ function changeColour(currentTotal) {
 	var inputVal = (+document.getElementById('budgetbox').value);
 	if(inputVal < currentTotal) {
 		document.getElementById('budgetbox').style.backgroundColor = "red";
-		document.getElementById("totalSum").innerHTML = "$" + runningTotal + "\n Budget not Enough!";
+		document.getElementById("totalSum").innerHTML = "$" + currentTotal + " Budget not Enough!";
 	}
 	else {
 		document.getElementById('budgetbox').style.backgroundColor = "green";
-		document.getElementById("totalSum").innerHTML = "$" + runningTotal + "\n Ceteris Paribus, budget should suffice.";
+		document.getElementById("totalSum").innerHTML = "$" + currentTotal + "\nCeteris Paribus, budget should suffice.";
 	}
 	
 }
