@@ -106,7 +106,7 @@ function calculateTotal() {
 	for (var i = 0; i < Tref.rows.length; ++i){
 		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
-	document.getElementById("totalSum").innerHTML = "$" + runningTotal;
+	document.getElementById("totalSum").innerHTML = "$" + (Math.round(runningTotal * 100) / 100).toFixed(2);;
 	changeColour(runningTotal);
 	//document.write("The total price is ", runningTotal );
 	//alert(`Current running total is ${runningTotal}`);
@@ -136,7 +136,7 @@ function exportTableToExcel(tableID, filename = ''){
     var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
     
     // Specify file name
-    filename = filename?filename+'.xlsx':'excel_data.xls';
+    filename = filename?filename+'.xls':'excel_data.xls';
     
     // Create download link element
     downloadLink = document.createElement("a");
