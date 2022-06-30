@@ -106,8 +106,8 @@ function calculateTotal() {
 	for (var i = 0; i < Tref.rows.length; ++i){
 		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
-	runnungTotal = (Math.round(runningTotal * 100) / 100).toFixed(2);
-	document.getElementById("totalSum").innerHTML = "$" + runningTotal;
+	//runnungTotal = (Math.round(runningTotal * 100) / 100).toFixed(2);
+	document.getElementById("totalSum").innerHTML = "$" + (Math.round(runningTotal * 100) / 100).toFixed(2);
 	changeColour(runningTotal);
 	//document.write("The total price is ", runningTotal );
 	//alert(`Current running total is ${runningTotal}`);
