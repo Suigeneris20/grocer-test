@@ -106,6 +106,7 @@ function calculateTotal() {
 	for (var i = 0; i < Tref.rows.length; ++i){
 		runningTotal += (+Tref.rows[i].cells[2].innerText)*(+Tref.rows[i].cells[3].innerText);
 	}
+	runnungTotal = (Math.round(runningTotal * 100) / 100).toFixed(2);
 	document.getElementById("totalSum").innerHTML = "$" + runningTotal;
 	changeColour(runningTotal);
 	//document.write("The total price is ", runningTotal );
@@ -120,11 +121,11 @@ function changeColour(currentTotal) {
 	var inputVal = (+document.getElementById('budgetbox').value);
 	if(inputVal < currentTotal) {
 		document.getElementById('budgetbox').style.backgroundColor = "red";
-		document.getElementById("totalSum").innerHTML = "$" + currentTotal + " Budget not Enough!";
+		document.getElementById("totalSum").innerHTML = "$" + currentTotal + "<br>Budget not Enough!";
 	}
 	else {
 		document.getElementById('budgetbox').style.backgroundColor = "green";
-		document.getElementById("totalSum").innerHTML = "$" + currentTotal + "\nCeteris Paribus, budget should suffice.";
+		document.getElementById("totalSum").innerHTML = "$" + currentTotal + "<br>Ceteris Paribus, budget should suffice.";
 	}
 	
 }
