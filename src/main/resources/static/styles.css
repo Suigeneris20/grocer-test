@@ -17,3 +17,7 @@ th {
     color: white;
 }
 
+#budgetbox {
+    position: relative;
+    margin-left: 0px;
+}
