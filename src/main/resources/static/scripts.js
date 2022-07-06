@@ -100,6 +100,7 @@ function deleteItem(id) {
 	}
 }
 
+// Created function for calculating total price of the items in the list.
 function calculateTotal() {
 	var runningTotal = 0;
 	var Tref = document.getElementsByTagName('table').items.getElementsByTagName('tbody').tbodyitems;
@@ -113,6 +114,8 @@ function calculateTotal() {
 	//alert(`Current running total is ${runningTotal}`);
 }
 
+/* Created a function for changing the color of input field to red when the budget is less than
+   total price of items. It also consists of code for changing the input field to green if total price is less than budget. */
 function changeColour(currentTotal) {
 	if (document.getElementById('budgetbox').value === '') {
 		alert('Please Enter your budgeted value');
@@ -129,7 +132,9 @@ function changeColour(currentTotal) {
 	}
 	
 }
-
+/*
+   This function consists of code for exporting table into excel file
+   */
 function exportTableToExcel(tableID, filename = ''){
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';

@@ -12,7 +12,7 @@
  
  
  
-
+<!--creating a table to store labels and input box for entering budget-->
 <table style="width:50%">
     <tr><td>Budget</td>
     <td> <input  type="text" size="10" id ="budgetbox"></td>
@@ -24,6 +24,9 @@
     <tr><td>Unit Price</td><td><input id="genre" type="text" size="20"></td></tr>
     <tr>
         <td colspan="2">
+        
+        <!-- created save button, add button, calculate button and exportTableToExcel button to save item, to add item, to calculate total 
+        price and to export table into the excel file respectively-->
             <button id="save" onclick="saveItem()" disabled="disabled">Save Item</button>
             &nbsp;<button id="add" onclick="addItem()">Add Item</button>
             &nbsp;<button id="calculate" onclick="calculateTotal()">Calculate Total</button>
